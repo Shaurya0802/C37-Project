@@ -1,7 +1,7 @@
 var dots = [];
 
 function setup(){
-    canvas = createCanvas(displayWidth-20,displayHeight-20);
+    canvas = createCanvas(displayWidth-70,displayHeight-70);
 }
 
 function mouseDragged(){
@@ -13,11 +13,11 @@ function mouseDragged(){
 }
 
 function draw(){
-    background(0);
+    background(200);
 
     beginShape();
     strokeWeight(7);
-    stroke(255);
+    stroke(0);
     noFill();
     for(var i = 0; i < dots.length; i++){
         vertex(dots[i].x,dots[i].y);
