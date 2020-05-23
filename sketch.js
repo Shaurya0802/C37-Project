@@ -27,7 +27,7 @@ function mouseDragged(){
 }
 
 function draw(){
-    background(240);
+    background(200);
 
     beginShape();
     strokeWeight(10);
