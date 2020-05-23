@@ -6,12 +6,23 @@ var paint;
 
 var dbArray = [];
 
+var reset;
+
 function setup(){
     database = firebase.database();
     canvas = createCanvas(1250,650);
 
     paint = database.ref('drawing');
     paint.on("value",readPosition,showError);
+
+    reset = createButton("Reset");
+    reset.position(50,10);
+    reset.mousePressed(clearDrawing);
+}
+
+function clearDrawing(){
+    dbArray = [];
+    dots = [];
 }
 
 function mouseDragged(){
